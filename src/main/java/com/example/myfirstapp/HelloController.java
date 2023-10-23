@@ -13,7 +13,7 @@ public class HelloController {
     private PasswordField password_field;
 
     @FXML
-    private Button authSigInButton;
+    private Button authSignInButton;
 
     @FXML
     private TextField login_field;
@@ -23,7 +23,7 @@ public class HelloController {
 
     @FXML
     void initialize() {
-        authSigInButton.setOnAction(actionEvent -> {
+        authSignInButton.setOnAction(actionEvent -> {
             System.out.println("Siz daxil ol düyməsinə kliklədiz");
         });
     }

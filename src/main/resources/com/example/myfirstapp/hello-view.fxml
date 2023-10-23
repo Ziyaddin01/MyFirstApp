@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myfirstapp.HelloController">
    <children>
       <AnchorPane layoutY="126.0" prefHeight="374.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
@@ -21,7 +20,7 @@
                   <Font name="Britannic Bold" size="47.0" />
                </font>
             </Label>
-            <Button fx:id="authSigInButton" layoutX="324.0" layoutY="218.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="153.0" style="-fx-background-color: #2E3348;" text="Daxil ol" textFill="WHITE">
+            <Button fx:id="authSignInButton" layoutX="324.0" layoutY="218.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="153.0" style="-fx-background-color: #2E3348;" text="Daxil ol" textFill="WHITE">
                <font>
                   <Font name="Book Antiqua Bold" size="30.0" />
                </font>
