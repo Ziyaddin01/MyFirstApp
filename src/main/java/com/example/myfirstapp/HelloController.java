@@ -29,6 +29,17 @@ public class HelloController {
 
     @FXML
     void initialize() {
+
+        authSignInButton.setOnAction(actionEvent ->{
+                String loginText = login_field.getText().trim();
+            String loginPassword = password_field.getText().trim();
+
+            if(!loginText.equals("") && !loginPassword.equals(""))
+                loginUser(loginText, loginPassword);
+            else
+                System.out.println("Login and password is empty");
+        });
+
         loginSignUpButton.setOnAction(actionEvent -> {
             loginSignUpButton.getScene().getWindow().hide();
 
@@ -46,6 +57,10 @@ public class HelloController {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
+    }
+
+    private void loginUser(String loginText, String loginPassword) {
+
     }
 
 }
