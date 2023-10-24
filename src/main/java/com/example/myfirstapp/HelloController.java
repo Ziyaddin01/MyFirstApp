@@ -44,21 +44,7 @@ public class HelloController {
         });
 
         loginSignUpButton.setOnAction(actionEvent -> {
-            loginSignUpButton.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/com/example/myfirstapp/signUp.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+            openNewScene("com/example/myfirstapp/signUp.fxml");
         });
     }
 
@@ -78,9 +64,9 @@ public class HelloController {
             }
             counter++;
         }
-        if (counter >= 1)
-            System.out.println("Success!");
-        else {
+        if (counter >= 1) {
+            openNewScene("com/example/myfirstapp/app.fxml");
+        } else {
             Shake userLoginAnim = new Shake(login_field);
             Shake userPassAnim = new Shake(password_field);
             userLoginAnim.playAnim();
@@ -88,4 +74,21 @@ public class HelloController {
         }
     }
 
+    public void openNewScene(String window){
+        loginSignUpButton.getScene().getWindow().hide();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource(window));
+
+        try {
+            loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+    }
 }
